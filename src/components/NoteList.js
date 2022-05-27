@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NoteListItem from './NoteListItem';
 import { dbRefShow } from './DataFirebase'
 import { onValue } from 'firebase/database';
+import {connect} from 'react-redux'
 
 class NoteList extends Component {
     constructor(props) {
@@ -31,8 +32,8 @@ class NoteList extends Component {
             this.setState({
                 dataFirebase: arrData
             });
-
         })
+        this.props.sortListNoteByDate()
     }
     
     getData = () => {
@@ -65,4 +66,14 @@ class NoteList extends Component {
     }
 }
 
-export default NoteList;
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        sortListNoteByDate: () => {
+            dispatch({
+                type: "SORT_LIST_NOTE"
+            })
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(NoteList)

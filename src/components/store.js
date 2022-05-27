@@ -1,5 +1,5 @@
 import { dbRef, dbRefShow } from './DataFirebase';
-import { child, push, remove, update } from "firebase/database";
+import { child, orderByValue, push, query, remove, update } from "firebase/database";
 
 var redux = require('redux')
 const noteInitialState = {
@@ -32,6 +32,9 @@ const noteReducer = (state = noteInitialState, action) => {
         case "DELETE_NOTE":
             remove(child(dbRefShow, action.deleteId))
             alert('delete note oke');
+            return state
+        case "SORT_LIST_NOTE":
+            query(dbRefShow, orderByValue('noteDate'))
             return state
         default:
             return state
