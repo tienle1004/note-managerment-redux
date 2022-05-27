@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/note-managerment-redux/static/css/main.073c9b0a.css",
+    "main.js": "/note-managerment-redux/static/js/main.5e24572f.js",
+    "static/js/787.dfb74201.chunk.js": "/note-managerment-redux/static/js/787.dfb74201.chunk.js",
+    "index.html": "/note-managerment-redux/index.html",
+    "main.073c9b0a.css.map": "/note-managerment-redux/static/css/main.073c9b0a.css.map",
+    "main.5e24572f.js.map": "/note-managerment-redux/static/js/main.5e24572f.js.map",
+    "787.dfb74201.chunk.js.map": "/note-managerment-redux/static/js/787.dfb74201.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.5e24572f.js"
+  ]
+}
